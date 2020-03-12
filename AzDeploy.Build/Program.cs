@@ -1,4 +1,4 @@
-﻿using AzDeploy.Cmd.Models;
+﻿using AzDeploy.Build.Models;
 using JsonSettings;
 using Microsoft.Azure.Storage.Auth;
 using Microsoft.Azure.Storage.Blob;
@@ -7,12 +7,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace AzDeploy.Cmd
+namespace AzDeploy.Build
 {
     class Program
-    {
-        private const string versionMeta = "version";        
-
+    {        
         static async Task Main(string[] args)
         {
             var script = GetDeployScript(args);
@@ -37,7 +35,7 @@ namespace AzDeploy.Cmd
             var uri = new Uri(GetBlobNameFromFilename(script.InstallerExe, script.StorageAccount));
             var blob = new CloudBlockBlob(uri, new StorageCredentials(script.StorageAccount.Name, script.StorageAccount.Key));            
             await blob.UploadFromFileAsync(script.InstallerExe);
-            blob.Metadata[versionMeta] = check.Version.ToString();
+            blob.Metadata[VersionCheck.VersionMetadata] = check.Version.ToString();
             await blob.SetMetadataAsync();
         }
 
@@ -58,8 +56,8 @@ namespace AzDeploy.Cmd
             try
             {
                 var remoteVersion = (await blob.ExistsAsync()) ?
-                    Version.Parse(blob.Metadata[versionMeta]) :
-                    Version.Parse("0.0.0");
+                    Version.Parse(blob.Metadata[VersionCheck.VersionMetadata]) :
+                    Version.Parse("0.0.0.0");
 
                 return new VersionCheck()
                 {

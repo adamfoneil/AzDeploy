@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace AzDeploy.Cmd.Models
+namespace AzDeploy.Build.Models
 {
     public class DeployScript
     {

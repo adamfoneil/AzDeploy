@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzDeploy.Cmd", "AzDeploy.Cmd\AzDeploy.Cmd.csproj", "{39051BAA-CDC2-489D-BF35-8EA3CC1AD47A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzDeploy.Client", "AzDeploy.Client\AzDeploy.Client.csproj", "{40B82A9C-7773-4B13-8811-403514788BD0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzDeploy.Build", "AzDeploy.Build\AzDeploy.Build.csproj", "{46D46E79-AC20-4043-8F14-421D3CA9726E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{39051BAA-CDC2-489D-BF35-8EA3CC1AD47A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39051BAA-CDC2-489D-BF35-8EA3CC1AD47A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39051BAA-CDC2-489D-BF35-8EA3CC1AD47A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39051BAA-CDC2-489D-BF35-8EA3CC1AD47A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40B82A9C-7773-4B13-8811-403514788BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40B82A9C-7773-4B13-8811-403514788BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40B82A9C-7773-4B13-8811-403514788BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40B82A9C-7773-4B13-8811-403514788BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46D46E79-AC20-4043-8F14-421D3CA9726E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46D46E79-AC20-4043-8F14-421D3CA9726E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46D46E79-AC20-4043-8F14-421D3CA9726E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46D46E79-AC20-4043-8F14-421D3CA9726E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
