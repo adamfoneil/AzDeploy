@@ -22,6 +22,9 @@ namespace AzDeploy.Cmd.Models
         [JsonProperty("installerCommand")]
         public string InstallerCommand { get; set; }
 
+        /// <summary>
+        /// any arguments (in my case DeployMaster .deploy script) required by InstallerCommand
+        /// </summary>
         [JsonProperty("installerArgs")]
         public string InstallerArguments { get; set; }
 
