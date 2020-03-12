@@ -10,6 +10,7 @@
     <PackageProjectUrl>https://github.com/adamosoftware/AzDeploy</PackageProjectUrl>
     <RepositoryUrl>https://github.com/adamosoftware/AzDeploy</RepositoryUrl>
     <PackageTags>winforms installer-download</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +23,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
