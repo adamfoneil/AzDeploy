@@ -19,8 +19,8 @@ namespace AzDeploy.Build
             if (check.IsNew)
             {
                 Console.WriteLine($"Building new installer version {check.Version}");
-                string installerArgs = script.InstallerArguments.Replace("%version%", check.Version.ToString());
-                var process = Process.Start(script.InstallerCommand, installerArgs);
+                string installerArgs = script.Installer.Arguments.Replace("%version%", check.Version.ToString());
+                var process = Process.Start(script.Installer.Command, installerArgs);
                 process.WaitForExit();
                 if (process.ExitCode == 1)
                 {

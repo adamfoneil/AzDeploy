@@ -16,17 +16,8 @@ namespace AzDeploy.Build.Models
         [JsonProperty("storageAccount")]
         public StorageAccountInfo StorageAccount { get; set; }
 
-        /// <summary>
-        /// command to execute to rebuild installer package
-        /// </summary>
-        [JsonProperty("installerCommand")]
-        public string InstallerCommand { get; set; }
-
-        /// <summary>
-        /// any arguments (in my case DeployMaster .deploy script) required by InstallerCommand
-        /// </summary>
-        [JsonProperty("installerArgs")]
-        public string InstallerArguments { get; set; }
+        [JsonProperty("installer")]
+        public InstallerInfo Installer { get; set; }
 
         /// <summary>
         /// setup executable that is uploaded to blob storage
@@ -44,6 +35,21 @@ namespace AzDeploy.Build.Models
 
             [JsonProperty("container")]
             public string Container { get; set; }
+        }
+
+        public class InstallerInfo
+        {
+            /// <summary>
+            /// command to execute to rebuild installer package
+            /// </summary>
+            [JsonProperty("command")]
+            public string Command { get; set; }
+
+            /// <summary>
+            /// any arguments (in my case DeployMaster .deploy script) required by InstallerCommand
+            /// </summary>
+            [JsonProperty("arguments")]
+            public string Arguments { get; set; }
         }
     }
 }
