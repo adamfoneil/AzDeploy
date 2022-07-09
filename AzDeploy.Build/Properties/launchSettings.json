@@ -2,7 +2,7 @@
   "profiles": {
     "AzDeploy.Cmd": {
       "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\Adam\\Source\\Repos\\ModelSync.WinForms\\AzDeploy.json\""
+      "commandLineArgs": "\"C:\\Users\\Adamo\\Source\\Repos\\ModelSync.WinForms\\AzDeploy.json\""
     }
   }
 }
